@@ -1,0 +1,10 @@
+Packages/
+Library/
+ProjectSettings/
+Logs/
+temp/
+UserSettings/
+obj/
+UpgradeLog.htm
+.vsconfig
+.vs
