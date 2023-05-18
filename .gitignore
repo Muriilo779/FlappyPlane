@@ -8,3 +8,8 @@ obj/
 UpgradeLog.htm
 .vsconfig
 .vs
+*.csproj
+*.controller
+*.meta
+*.unity
+
