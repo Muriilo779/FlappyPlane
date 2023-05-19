@@ -12,4 +12,4 @@ UpgradeLog.htm
 *.controller
 *.meta
 *.unity
-
+*.prefab
