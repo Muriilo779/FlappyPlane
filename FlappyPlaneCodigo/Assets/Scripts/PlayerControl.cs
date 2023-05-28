@@ -41,7 +41,6 @@ public class PlayerControl : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Oiii");
         SceneManager.LoadScene("Jogo");
     }
 }
