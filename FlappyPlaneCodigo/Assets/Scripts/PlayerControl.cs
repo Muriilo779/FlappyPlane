@@ -19,7 +19,7 @@ public class PlayerControl : MonoBehaviour
     void Update()
     {
         Subir();
-
+        LimitandoVoo();
         LimitandoVelocidade();
     }
 
@@ -43,5 +43,12 @@ public class PlayerControl : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         SceneManager.LoadScene("Jogo");
+    }
+    private void LimitandoVoo()
+    {
+        if(transform.position.y > 5.5f || transform.position.y < -5.5f)
+        {
+            SceneManager.LoadScene("Jogo");
+        }
     }
 }

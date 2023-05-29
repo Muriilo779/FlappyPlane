@@ -47,7 +47,7 @@ public class GameControler : MonoBehaviour
     private void ObstacleSpawner()
     {
         timer -= Time.deltaTime;
-        posicao.y = Random.Range(posicaoMin, posicaoMax);
+        posicao.y = Random.Range(posicaoMin / level, posicaoMax);
         if (timer <= 0)
         {
             Instantiate(obsctacle, posicao, Quaternion.identity);
