@@ -8,6 +8,7 @@ public class PlayerControl : MonoBehaviour
 {
     private Rigidbody2D meuRigid;
     [SerializeField] private float velocidade = 5f;
+    
     void Start()
     {
         //Pegando meu rigidBody
