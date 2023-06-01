@@ -9,7 +9,7 @@ public class GameControler : MonoBehaviour
 
     [SerializeField] private GameObject obsctacle;
     [SerializeField] private Vector3 posicao;
-
+    [SerializeField] private AudioClip somNivel;
     [SerializeField] private float spawnMin = 1f;
     [SerializeField] private float spawnMax = 3f;
     //Variavel dos pontos do canvas
@@ -19,13 +19,13 @@ public class GameControler : MonoBehaviour
 
     private float posicaoMin = -0.4f;
     private float posicaoMax = 2.4f;
-
+    private Vector3 camPosicao;
     private float pontos = 0f;
     private int level = 1;
 
     void Start()
     {
-    
+        camPosicao = Camera.main.transform.position;   
     }
 
     // Update is called once per frame
@@ -59,6 +59,7 @@ public class GameControler : MonoBehaviour
     {
         if (pontos >= proximoLevel)
         {
+            AudioSource.PlayClipAtPoint(somNivel,camPosicao);
             level++;
             proximoLevel *= 2;
         }

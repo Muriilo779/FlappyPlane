@@ -8,6 +8,8 @@ public class PlayerControl : MonoBehaviour
 {
     private Rigidbody2D meuRigid;
     [SerializeField] private float velocidade = 5f;
+    [SerializeField] private GameObject puff;
+    [SerializeField] private Vector3 posicao;
     
     void Start()
     {
@@ -29,6 +31,11 @@ public class PlayerControl : MonoBehaviour
         {
             //Fazendo a velocidade do RB ir para cima
             meuRigid.velocity = Vector2.up * velocidade;
+
+            
+            //Instanciando o puff
+            GameObject meuPuff = Instantiate(puff, transform.position, Quaternion.identity);
+            Destroy(meuPuff, 1.5f);
         }
     }
 
